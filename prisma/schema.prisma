@@ -1,0 +1,23 @@
+// This is your Prisma schema file,(Este é o seu arquivo de esquema Prisma)
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id*     hash string
+  title*     String
+  date*      premiere
+  is running boolean
+  language*  String
+
+  main genre* String
+
+  poster url String
+}
